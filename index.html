@@ -79,10 +79,11 @@
 
 
     <!-- ================= AUDIO GLOBAL ================= -->
+    <!-- PERBAIKAN: path relatif (tanpa "/" di depan) -->
 
     <audio
         id="birthdayMusic"
-        src="/audio/ulangtahun.mp3"
+        src="audio/ulangtahun.mp3"
         preload="auto"
         loop
     ></audio>
@@ -97,9 +98,9 @@
         </a>
 
         <div class="nav-links">
-            <a href="#home">SELMAT</a>
+            <a href="#home">SELAMAT</a>
             <a href="#about">ULANG</a>
-            <a href="#features">TAHUNN</a>
+            <a href="#features">TAHUN</a>
         </div>
 
         <a href="#about" class="nav-button">
@@ -143,56 +144,18 @@
         <div class="hero-card reveal">
 
             <div class="creative-image-container">
-
                 <img
-                    id="creativeImage"
+                    src="foto/enggi3.jpeg"
                     class="creative-image"
                     alt="Creative Design"
-                    hidden
                 >
-
-                <div
-                    id="creativePlaceholder"
-                    class="image-placeholder-card"
-                >
-                    <span>✦</span>
-                    <small>Creative Design</small>
-                </div>
-
             </div>
 
-            <h3>Enggi Yolanda</h3>
+            <h3>Creative Design</h3>
 
             <p>
-                17 November 2026
+                Beautiful things start with imagination.
             </p>
-
-            <div class="image-controls">
-
-                <label
-                    for="creativeUpload"
-                    class="upload-button"
-                >
-                    Pilih Gambar
-                </label>
-
-                <input
-                    type="file"
-                    id="creativeUpload"
-                    accept="image/*"
-                    hidden
-                >
-
-                <button
-                    type="button"
-                    id="removeCreative"
-                    class="remove-button"
-                    hidden
-                >
-                    Hapus
-                </button>
-
-            </div>
 
             <button
                 type="button"
@@ -212,48 +175,11 @@
     <section class="about" id="about">
 
         <div class="about-image reveal">
-
             <img
-                id="aboutImage"
+                src="foto/ENGGI 2.jpeg"
                 class="about-photo"
                 alt="Foto About"
-                hidden
             >
-
-            <div
-                id="aboutPlaceholder"
-                class="about-placeholder"
-            >
-                ✦
-            </div>
-
-            <div class="about-image-controls">
-
-                <label
-                    for="aboutUpload"
-                    class="upload-button"
-                >
-                    Pilih Gambar
-                </label>
-
-                <input
-                    type="file"
-                    id="aboutUpload"
-                    accept="image/*"
-                    hidden
-                >
-
-                <button
-                    type="button"
-                    id="removeAbout"
-                    class="remove-button"
-                    hidden
-                >
-                    Hapus
-                </button>
-
-            </div>
-
         </div>
 
 
@@ -283,198 +209,52 @@
     </section>
 
 
-    <!-- ================= FEATURES SECTION ================= -->
+    <!-- ================= FEATURES SECTION (INTERACTIVE GIFT) ================= -->
 
     <section class="features" id="features">
 
         <div class="section-title reveal">
 
             <span class="tag">
-                OUR FEATURES
+                A SPECIAL GIFT
             </span>
 
-            <h2>What We Create</h2>
+            <h2>Sentuhan Kejutan</h2>
 
             <p>
-                Simple ideas, extraordinary experiences.
+                Ada sesuatu yang menantimu di bawah ini.
             </p>
 
         </div>
 
 
-        <div class="cards">
+        <div class="features-gift-wrapper reveal">
 
-            <!-- CARD 1 -->
-
-            <div class="card reveal">
-
-                <div class="card-image-container">
-
-                    <img
-                        id="cardImage1"
-                        class="card-image"
-                        alt="Creative"
-                        hidden
-                    >
-
-                    <div
-                        id="cardPlaceholder1"
-                        class="card-image-placeholder"
-                    >
-                        <span>✦</span>
-                    </div>
-
-                </div>
-
-                <h3>Yourself</h3>
-
-                <p>
-                    Beautiful and strong woman.
-                </p>
-
-                <div class="card-image-controls">
-
-                    <label
-                        for="cardUpload1"
-                        class="upload-button"
-                    >
-                        Pilih Gambar
-                    </label>
-
-                    <input
-                        type="file"
-                        id="cardUpload1"
-                        accept="image/*"
-                        hidden
-                    >
-
-                    <button
-                        type="button"
-                        id="removeCard1"
-                        class="remove-button"
-                        hidden
-                    >
-                        Hapus
-                    </button>
-
-                </div>
-
+            <div class="click-me-text" id="clickMeText">
+                👇 Klik Aku 👇
             </div>
 
-
-            <!-- CARD 2 -->
-
-            <div class="card reveal">
-
-                <div class="card-image-container">
-
-                    <img
-                        id="cardImage2"
-                        class="card-image"
-                        alt="Special Moments"
-                        hidden
-                    >
-
-                    <div
-                        id="cardPlaceholder2"
-                        class="card-image-placeholder"
-                    >
-                        <span>⚡</span>
-                    </div>
-
+            <!-- KADO INTERAKTIF -->
+            <div class="gift-box interactive-gift-box" id="interactiveGiftBox">
+                <div class="gift-lid">
+                    <div class="lid-ribbon"></div>
+                    <div class="gift-bow"></div>
                 </div>
-
-                <h3>Special Moments</h3>
-
-                <p>
-                    Creating beautiful memories together.
-                </p>
-
-                <div class="card-image-controls">
-
-                    <label
-                        for="cardUpload2"
-                        class="upload-button"
-                    >
-                        Pilih Gambar
-                    </label>
-
-                    <input
-                        type="file"
-                        id="cardUpload2"
-                        accept="image/*"
-                        hidden
-                    >
-
-                    <button
-                        type="button"
-                        id="removeCard2"
-                        class="remove-button"
-                        hidden
-                    >
-                        Hapus
-                    </button>
-
+                <div class="gift-body">
+                    <div class="gift-ribbon"></div>
                 </div>
-
             </div>
 
-
-            <!-- CARD 3 -->
-
-            <div class="card reveal">
-
-                <div class="card-image-container">
-
-                    <img
-                        id="cardImage3"
-                        class="card-image"
-                        alt="Happiness"
-                        hidden
-                    >
-
-                    <div
-                        id="cardPlaceholder3"
-                        class="card-image-placeholder"
-                    >
-                        <span>∞</span>
-                    </div>
-
-                </div>
-
-                <h3>Happiness</h3>
-
+            <!-- PESAN ULANG TAHUN (MUNCUL SETELAH KLIK) -->
+            <div class="interactive-message" id="interactiveMessage">
+                <div class="birthday-stars">✨ 🎉 ✨</div>
+                <h2>Happy Birthday!</h2>
+                <h3>Enggi Yolanda</h3>
                 <p>
-                    Unlimited happiness.
+                    Selamat ulang tahun! Semoga hari ini dan seterusnya
+                    dipenuhi dengan kebahagiaan, tawa, cinta, dan
+                    semua mimpi indahmu menjadi kenyataan. 💜
                 </p>
-
-                <div class="card-image-controls">
-
-                    <label
-                        for="cardUpload3"
-                        class="upload-button"
-                    >
-                        Pilih Gambar
-                    </label>
-
-                    <input
-                        type="file"
-                        id="cardUpload3"
-                        accept="image/*"
-                        hidden
-                    >
-
-                    <button
-                        type="button"
-                        id="removeCard3"
-                        class="remove-button"
-                        hidden
-                    >
-                        Hapus
-                    </button>
-
-                </div>
-
             </div>
 
         </div>

@@ -61,46 +61,30 @@ a {
 .entry-content {
     max-width: 650px;
     animation: entryFadeIn 1.3s ease;
-
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 @keyframes entryFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .entry-tag {
     display: inline-block;
-
     color: #c4b5fd;
     font-size: 12px;
     letter-spacing: 4px;
-
     margin-bottom: 22px;
 }
 
 .entry-content h1 {
     font-size: clamp(38px, 8vw, 70px);
     line-height: 1.15;
-
     margin-bottom: 22px;
 }
 
 .entry-content h1 span {
-    background: linear-gradient(
-        90deg,
-        #c084fc,
-        #f9a8d4,
-        #c084fc
-    );
+    background: linear-gradient(90deg, #c084fc, #f9a8d4, #c084fc);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -110,39 +94,25 @@ a {
     color: #999;
     font-size: 15px;
     line-height: 1.8;
-
     margin-bottom: 35px;
 }
 
 .enter-button {
     padding: 16px 36px;
-
     color: white;
     font-size: 15px;
     font-weight: bold;
-
-    background: linear-gradient(
-        135deg,
-        #8b5cf6,
-        #c026d3
-    );
-
+    background: linear-gradient(135deg, #8b5cf6, #c026d3);
     border: none;
     border-radius: 12px;
-
     cursor: pointer;
     transition: 0.3s;
-
     box-shadow: 0 10px 30px #8b5cf655;
 }
 
 .enter-button:hover {
     transform: translateY(-3px) scale(1.03);
     box-shadow: 0 14px 40px #8b5cf688;
-}
-
-.enter-button:active {
-    transform: translateY(0) scale(1);
 }
 
 
@@ -153,26 +123,18 @@ a {
 .entry-gift-overlay {
     position: absolute;
     inset: 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     padding: 20px;
     text-align: center;
-
     animation: entryGiftFadeIn 0.6s ease;
 }
 
 @keyframes entryGiftFadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .entry-gift-overlay .gift-scene {
@@ -184,11 +146,8 @@ a {
 .entry-birthday-message {
     opacity: 0;
     visibility: hidden;
-
     transform: translateY(30px) scale(0.85);
-
     transition: 0.8s ease;
-
     max-width: 550px;
     margin-top: 10px;
 }
@@ -196,7 +155,6 @@ a {
 .entry-birthday-message.show {
     opacity: 1;
     visibility: visible;
-
     transform: translateY(0) scale(1);
 }
 
@@ -207,25 +165,16 @@ a {
 
 .entry-birthday-message h1 {
     font-size: clamp(32px, 6vw, 55px);
-
-    background: linear-gradient(
-        90deg,
-        #c084fc,
-        #f9a8d4,
-        #c084fc
-    );
-
+    background: linear-gradient(90deg, #c084fc, #f9a8d4, #c084fc);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-
     margin-bottom: 12px;
 }
 
 .entry-birthday-message h2 {
     color: #f9a8d4;
     font-size: clamp(22px, 4vw, 32px);
-
     margin-bottom: 15px;
 }
 
@@ -243,49 +192,27 @@ a {
     width: min(1100px, 90%);
     margin: auto;
     padding: 30px 0;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-}
+.logo { font-size: 25px; font-weight: bold; }
+.logo span { color: #a78bfa; }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { color: #aaa; transition: 0.3s; }
+.nav-links a:hover { color: #a78bfa; }
 
-.logo span {
-    color: #a78bfa;
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    color: #aaa;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #a78bfa;
-}
-
-.nav-button,
-.hero-button {
+.nav-button, .hero-button {
     background: #8b5cf6;
     color: white;
-
     padding: 13px 22px;
     border-radius: 8px;
-
     display: inline-block;
     transition: 0.3s;
 }
 
-.nav-button:hover,
-.hero-button:hover {
+.nav-button:hover, .hero-button:hover {
     background: #7c3aed;
     transform: translateY(-3px);
 }
@@ -299,22 +226,14 @@ a {
     width: min(1100px, 90%);
     min-height: 85vh;
     margin: auto;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
 }
 
-.hero-content {
-    flex: 1;
-}
-
-.tag {
-    color: #a78bfa;
-    letter-spacing: 3px;
-    font-size: 12px;
-}
+.hero-content { flex: 1; }
+.tag { color: #a78bfa; letter-spacing: 3px; font-size: 12px; }
 
 .hero h1 {
     font-size: clamp(45px, 7vw, 80px);
@@ -322,13 +241,9 @@ a {
     line-height: 1.15;
 }
 
-.hero h1 span,
-.contact h2 span {
-    color: #a78bfa;
-}
+.hero h1 span, .contact h2 span { color: #a78bfa; }
 
-.hero p,
-.about p {
+.hero p, .about p {
     color: #999;
     line-height: 1.8;
     max-width: 430px;
@@ -344,22 +259,13 @@ a {
     width: 300px;
     min-height: 440px;
     flex-shrink: 0;
-
     padding: 24px;
-
-    background: linear-gradient(
-        145deg,
-        #292044,
-        #111827
-    );
-
+    background: linear-gradient(145deg, #292044, #111827);
     border: 1px solid #383052;
     border-radius: 25px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
     transition: 0.3s;
 }
 
@@ -372,16 +278,9 @@ a {
     width: 100%;
     height: 175px;
     margin-bottom: 20px;
-
     border-radius: 14px;
     overflow: hidden;
-
-    background: linear-gradient(
-        135deg,
-        #30234e,
-        #111827,
-        #4c1d95
-    );
+    background: linear-gradient(135deg, #30234e, #111827, #4c1d95);
 }
 
 .creative-image {
@@ -391,108 +290,19 @@ a {
     object-fit: cover;
 }
 
-.image-placeholder-card {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-    color: #c4b5fd;
-
-    background: radial-gradient(
-        circle at center,
-        #7046a8,
-        #211a38 70%
-    );
-}
-
-.image-placeholder-card span {
-    font-size: 55px;
-}
-
-.image-placeholder-card small {
-    font-size: 12px;
-}
-
-.hero-card h3 {
-    font-size: 19px;
-}
-
-.hero-card p {
-    color: #999;
-    margin-top: 10px;
-    margin-bottom: 0;
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   5. IMAGE UPLOAD CONTROLS
-========================================= */
-
-.image-controls {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.upload-button,
-.remove-button {
-    display: inline-block;
-    padding: 10px 14px;
-
-    border: none;
-    border-radius: 7px;
-
-    background: #8b5cf6;
-    color: white;
-
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.upload-button:hover {
-    background: #7c3aed;
-}
-
-.remove-button {
-    background: #343047;
-}
-
-.remove-button:hover {
-    background: #dc3545;
-}
-
-
-/* =========================================
-   6. GIFT BUTTON
-========================================= */
+.hero-card h3 { font-size: 19px; }
+.hero-card p { color: #999; margin-top: 10px; margin-bottom: 0; line-height: 1.7; }
 
 .gift-button {
     width: 100%;
     margin-top: 15px;
     padding: 13px;
-
-    background: linear-gradient(
-        135deg,
-        #8b5cf6,
-        #c026d3
-    );
-
+    background: linear-gradient(135deg, #8b5cf6, #c026d3);
     border: none;
     border-radius: 9px;
-
     color: white;
     font-size: 14px;
     font-weight: bold;
-
     cursor: pointer;
     transition: 0.3s;
 }
@@ -504,17 +314,15 @@ a {
 
 
 /* =========================================
-   7. ABOUT SECTION
+   5. ABOUT SECTION
 ========================================= */
 
 .about {
     width: min(1100px, 90%);
     margin: 100px auto;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 70px;
-
     align-items: center;
     min-height: 400px;
 }
@@ -522,18 +330,10 @@ a {
 .about-image {
     width: 100%;
     height: 350px;
-
     position: relative;
     overflow: hidden;
-
     border-radius: 25px;
-
-    background: linear-gradient(
-        135deg,
-        #30234e,
-        #111827,
-        #4c1d95
-    );
+    background: linear-gradient(135deg, #30234e, #111827, #4c1d95);
 }
 
 .about-photo {
@@ -541,35 +341,6 @@ a {
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-.about-placeholder {
-    width: 100%;
-    height: 100%;
-
-    display: grid;
-    place-items: center;
-
-    font-size: 75px;
-    color: #c4b5fd;
-
-    background: linear-gradient(
-        135deg,
-        #30234e,
-        #111827,
-        #4c1d95
-    );
-}
-
-.about-image-controls {
-    position: absolute;
-    bottom: 18px;
-    left: 18px;
-    right: 18px;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
 .about h2 {
@@ -580,7 +351,7 @@ a {
 
 
 /* =========================================
-   8. FEATURES SECTION
+   6. FEATURES SECTION (INTERACTIVE GIFT)
 ========================================= */
 
 .features {
@@ -602,107 +373,92 @@ a {
     color: #999;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.card {
-    padding: 35px;
-
-    background: #111827;
-    border: 1px solid #252d40;
-    border-radius: 18px;
-
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    border-color: #8b5cf6;
-}
-
-.card-icon {
-    font-size: 40px;
-    color: #a78bfa;
-    margin-bottom: 20px;
-}
-
-.card p {
-    color: #999;
-    margin-top: 12px;
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   8b. CARD IMAGE SUPPORT
-========================================= */
-
-.card-image-container {
-    width: 100%;
-    height: 160px;
-    margin-bottom: 20px;
-
-    border-radius: 12px;
-    overflow: hidden;
-
-    background: linear-gradient(
-        135deg,
-        #30234e,
-        #111827,
-        #4c1d95
-    );
-}
-
-.card-image {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-.card-image-placeholder {
-    width: 100%;
-    height: 100%;
-
-    display: grid;
-    place-items: center;
-
-    font-size: 55px;
-    color: #a78bfa;
-
-    background: radial-gradient(
-        circle at center,
-        #3a2d5c,
-        #111827 70%
-    );
-}
-
-.card-image-controls {
+.features-gift-wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 40px 0;
+}
 
-    margin-top: 18px;
+.click-me-text {
+    color: #f9a8d4;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+    animation: bounceText 1.5s infinite;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes bounceText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.interactive-gift-box {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: scale(1.3);
+}
+
+.interactive-gift-box:hover {
+    transform: scale(1.35) translateY(-5px);
+}
+
+.interactive-message {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: 0.8s ease;
+    max-width: 600px;
+    margin-top: 30px;
+    background: #111827;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #8b5cf6;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
+
+.interactive-message.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.interactive-message .birthday-stars {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.interactive-message h2 {
+    color: #c084fc;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.interactive-message h3 {
+    color: #f9a8d4;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.interactive-message p {
+    color: #d1c5e5;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 
 /* =========================================
-   9. CONTACT SECTION
+   7. CONTACT SECTION
 ========================================= */
 
 .contact {
     text-align: center;
     padding: 100px 20px;
-
-    background: linear-gradient(
-        180deg,
-        #080b14,
-        #17112a
-    );
+    background: linear-gradient(180deg, #080b14, #17112a);
 }
 
 .contact h2 {
@@ -712,7 +468,7 @@ a {
 
 
 /* =========================================
-   10. FOOTER
+   8. FOOTER
 ========================================= */
 
 footer {
@@ -723,16 +479,13 @@ footer {
 
 
 /* =========================================
-   11. SCROLL REVEAL
+   9. SCROLL REVEAL
 ========================================= */
 
 .reveal {
     opacity: 0;
     transform: translateY(60px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .reveal.active {
@@ -750,7 +503,7 @@ footer {
 
 
 /* =========================================
-   11b. FLOATING MUSIC BUTTON
+   10. FLOATING MUSIC BUTTON
 ========================================= */
 
 .floating-music {
@@ -758,64 +511,40 @@ footer {
     bottom: 25px;
     right: 25px;
     z-index: 9998;
-
     width: 55px;
     height: 55px;
-
     display: none;
     align-items: center;
     justify-content: center;
-
     border: none;
     border-radius: 50%;
-
-    background: linear-gradient(
-        135deg,
-        #8b5cf6,
-        #c026d3
-    );
-
+    background: linear-gradient(135deg, #8b5cf6, #c026d3);
     color: white;
     font-size: 22px;
-
     cursor: pointer;
     transition: 0.3s;
-
     box-shadow: 0 5px 20px #8b5cf655;
 }
 
-.floating-music.show {
-    display: flex;
-}
-
-.floating-music:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 30px #8b5cf688;
-}
-
-.floating-music.paused {
-    background: #343047;
-}
+.floating-music.show { display: flex; }
+.floating-music:hover { transform: scale(1.1); box-shadow: 0 8px 30px #8b5cf688; }
+.floating-music.paused { background: #343047; }
 
 
 /* =========================================
-   12. BIRTHDAY MODAL
+   11. BIRTHDAY MODAL
 ========================================= */
 
 .birthday-modal {
     position: fixed;
     inset: 0;
     z-index: 9999;
-
     display: none;
     align-items: center;
     justify-content: center;
-
     padding: 20px;
-
     background: rgba(3, 3, 12, 0.94);
     backdrop-filter: blur(12px);
-
     overflow-y: auto;
 }
 
@@ -825,36 +554,20 @@ footer {
 }
 
 @keyframes modalFade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .birthday-content {
     position: relative;
-
     width: 100%;
     max-width: 550px;
-
     min-height: 550px;
     padding: 40px 25px;
-
     border: 1px solid #7650bd;
     border-radius: 28px;
-
-    background: linear-gradient(
-        145deg,
-        #211735,
-        #101426,
-        #32165c
-    );
-
+    background: linear-gradient(145deg, #211735, #101426, #32165c);
     text-align: center;
-
     box-shadow: 0 0 60px #8b5cf633;
     overflow: hidden;
 }
@@ -863,13 +576,10 @@ footer {
     position: absolute;
     top: 15px;
     right: 20px;
-
     background: transparent;
     border: none;
-
     color: white;
     font-size: 32px;
-
     cursor: pointer;
     z-index: 20;
 }
@@ -883,14 +593,12 @@ footer {
 
 
 /* =========================================
-   13. GIFT BOX
+   12. GIFT BOX (Base Style)
 ========================================= */
 
 .gift-scene {
     position: relative;
-
     height: 260px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -898,10 +606,8 @@ footer {
 
 .gift-box {
     position: relative;
-
     width: 150px;
     height: 140px;
-
     margin-top: 50px;
     z-index: 5;
 }
@@ -909,78 +615,48 @@ footer {
 .gift-body {
     position: absolute;
     bottom: 0;
-
     width: 150px;
     height: 105px;
-
-    background: linear-gradient(
-        135deg,
-        #a855f7,
-        #7c3aed
-    );
-
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
     border-radius: 5px 5px 12px 12px;
-
     box-shadow: 0 12px 35px #00000066;
 }
 
 .gift-ribbon {
     position: absolute;
-
     left: 62px;
     top: 0;
-
     width: 26px;
     height: 100%;
-
     background: #f9a8d4;
 }
 
 .gift-lid {
     position: absolute;
     top: 25px;
-
     width: 170px;
     height: 35px;
-
     left: -10px;
-
     z-index: 3;
-
-    background: linear-gradient(
-        135deg,
-        #c084fc,
-        #9333ea
-    );
-
+    background: linear-gradient(135deg, #c084fc, #9333ea);
     border-radius: 8px;
-
     box-shadow: 0 5px 15px #00000055;
-
     transform-origin: left bottom;
 }
 
 .lid-ribbon {
     position: absolute;
-
     left: 72px;
     top: 0;
-
     width: 26px;
     height: 100%;
-
     background: #f9a8d4;
 }
 
-
-/* GIFT BOW */
-
 .gift-bow {
     position: absolute;
-
     width: 45px;
     height: 35px;
-
     top: -25px;
     left: 62px;
 }
@@ -988,29 +664,19 @@ footer {
 .gift-bow::before,
 .gift-bow::after {
     content: "";
-
     position: absolute;
-
     width: 28px;
     height: 22px;
-
     border: 9px solid #f9a8d4;
     border-radius: 50% 50% 0 50%;
 }
 
-.gift-bow::before {
-    left: -10px;
-    transform: rotate(30deg);
-}
-
-.gift-bow::after {
-    right: -10px;
-    transform: rotate(60deg);
-}
+.gift-bow::before { left: -10px; transform: rotate(30deg); }
+.gift-bow::after { right: -10px; transform: rotate(60deg); }
 
 
 /* =========================================
-   14. GIFT OPEN ANIMATION
+   13. GIFT OPEN ANIMATION
 ========================================= */
 
 .gift-box.open .gift-lid {
@@ -1018,14 +684,8 @@ footer {
 }
 
 @keyframes openLid {
-    0% {
-        transform: translate(0, 0) rotate(0);
-    }
-
-    100% {
-        transform: translate(25px, -120px)
-                   rotate(-30deg);
-    }
+    0% { transform: translate(0, 0) rotate(0); }
+    100% { transform: translate(25px, -120px) rotate(-30deg); }
 }
 
 .gift-box.open .gift-body {
@@ -1033,129 +693,79 @@ footer {
 }
 
 @keyframes giftBounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
 }
 
 
 /* =========================================
-   15. SPARKLES
+   14. SPARKLES
 ========================================= */
 
 .sparkles {
     position: absolute;
     inset: 0;
-
     pointer-events: none;
 }
 
 .spark {
     position: absolute;
-
     left: 50%;
     top: 55%;
-
     font-size: 23px;
-
     animation: sparkleExplosion 1.5s ease-out forwards;
 }
 
 @keyframes sparkleExplosion {
-    0% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(0);
-    }
-
-    70% {
-        opacity: 1;
-    }
-
+    0% { opacity: 1; transform: translate(-50%, -50%) scale(0); }
+    70% { opacity: 1; }
     100% {
         opacity: 0;
-        transform:
-            translate(
-                calc(-50% + var(--x)),
-                calc(-50% + var(--y))
-            )
-            scale(1.8);
+        transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1.8);
     }
 }
 
 
 /* =========================================
-   16. CONFETTI
+   15. CONFETTI
 ========================================= */
 
 .confetti {
     position: fixed;
     top: -20px;
-
     width: 10px;
     height: 15px;
-
     z-index: 100001;
     pointer-events: none;
-
     animation: confettiFall var(--duration) linear forwards;
 }
 
 @keyframes confettiFall {
-    0% {
-        transform: translateY(-20px) rotate(0deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(110vh) rotate(900deg);
-        opacity: 0;
-    }
+    0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(900deg); opacity: 0; }
 }
 
 
 /* =========================================
-   16b. FIREWORKS (KEMBANG API)
+   16. FIREWORKS (KEMBANG API)
 ========================================= */
 
 .firework-particle {
     position: fixed;
-
     width: 9px;
     height: 9px;
-
     border-radius: 50%;
-
     pointer-events: none;
     z-index: 100002;
-
-    animation: fireworkBurst var(--duration)
-               cubic-bezier(0.15, 0.8, 0.3, 1)
-               forwards;
-
-    box-shadow: 0 0 10px var(--color),
-                0 0 20px var(--color);
+    animation: fireworkBurst var(--duration) cubic-bezier(0.15, 0.8, 0.3, 1) forwards;
+    box-shadow: 0 0 10px var(--color), 0 0 20px var(--color);
 }
 
 @keyframes fireworkBurst {
-    0% {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 1;
-    }
-
-    20% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1.2);
-    }
-
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+    20% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
     100% {
-        transform: translate(
-            calc(-50% + var(--x)),
-            calc(-50% + var(--y))
-        ) scale(0.3);
+        transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(0.3);
         opacity: 0;
     }
 }
@@ -1168,62 +778,30 @@ footer {
 .birthday-message {
     opacity: 0;
     transform: translateY(30px) scale(0.8);
-
     visibility: hidden;
-
     transition: 0.8s ease;
 }
 
 .birthday-message.show {
     opacity: 1;
     visibility: visible;
-
     transform: translateY(0) scale(1);
 }
 
-.birthday-stars {
-    font-size: 30px;
-    margin-bottom: 12px;
-}
+.birthday-stars { font-size: 30px; margin-bottom: 12px; }
 
 .birthday-message h1 {
     font-size: clamp(30px, 6vw, 45px);
-
-    background: linear-gradient(
-        90deg,
-        #c084fc,
-        #f9a8d4,
-        #c084fc
-    );
-
+    background: linear-gradient(90deg, #c084fc, #f9a8d4, #c084fc);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-
     margin-bottom: 12px;
 }
 
-.birthday-message h2 {
-    color: #f9a8d4;
-    font-size: 25px;
-    margin-bottom: 18px;
-}
-
-.birthday-message p {
-    color: #d1c5e5;
-
-    font-size: 14px;
-    line-height: 1.8;
-
-    max-width: 380px;
-    margin: 12px auto;
-}
-
-.birthday-message h3 {
-    color: #c4b5fd;
-    font-size: 16px;
-    margin-top: 22px;
-}
+.birthday-message h2 { color: #f9a8d4; font-size: 25px; margin-bottom: 18px; }
+.birthday-message p { color: #d1c5e5; font-size: 14px; line-height: 1.8; max-width: 380px; margin: 12px auto; }
+.birthday-message h3 { color: #c4b5fd; font-size: 16px; margin-top: 22px; }
 
 
 /* =========================================
@@ -1236,41 +814,26 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
-
     margin: 15px auto 20px;
     position: relative;
     z-index: 10;
 }
 
-.music-control span {
-    color: #c4b5fd;
-    font-size: 12px;
-}
+.music-control span { color: #c4b5fd; font-size: 12px; }
 
 .music-toggle {
     padding: 10px 18px;
-
     border: 1px solid #a78bfa;
     border-radius: 30px;
-
     background: #352052;
     color: white;
-
     font-size: 12px;
     cursor: pointer;
-
     transition: 0.3s;
 }
 
-.music-toggle:hover {
-    background: #8b5cf6;
-    transform: scale(1.05);
-}
-
-.music-toggle.playing {
-    background: #8b5cf6;
-    box-shadow: 0 0 15px #8b5cf666;
-}
+.music-toggle:hover { background: #8b5cf6; transform: scale(1.05); }
+.music-toggle.playing { background: #8b5cf6; box-shadow: 0 0 15px #8b5cf666; }
 
 
 /* =========================================
@@ -1279,22 +842,16 @@ footer {
 
 .replay-button {
     margin-top: 20px;
-
     padding: 12px 22px;
-
     color: white;
     background: #8b5cf6;
-
     border: none;
     border-radius: 8px;
-
     cursor: pointer;
     transition: 0.3s;
 }
 
-.replay-button:hover {
-    background: #7c3aed;
-}
+.replay-button:hover { background: #7c3aed; }
 
 
 /* =========================================
@@ -1302,128 +859,49 @@ footer {
 ========================================= */
 
 @media (max-width: 900px) {
-
-    .hero {
-        gap: 30px;
-    }
-
-    .hero-card {
-        width: 280px;
-    }
-
-    .about {
-        gap: 35px;
-    }
-
+    .hero { gap: 30px; }
+    .hero-card { width: 280px; }
+    .about { gap: 35px; }
 }
-
 
 @media (max-width: 700px) {
-
-    .navbar {
-        padding: 22px 0;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-
-        padding: 70px 0;
-    }
-
-    .hero-card {
-        width: 100%;
-        max-width: 400px;
-        min-height: 430px;
-    }
-
-    .creative-image-container {
-        height: 190px;
-    }
-
-    .about {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        margin: 70px auto;
-    }
-
-    .about-image {
-        height: 300px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title h2 {
-        font-size: 32px;
-    }
-
-    .entry-gift-overlay .gift-scene {
-        height: 260px;
-    }
-
+    .navbar { padding: 22px 0; }
+    .nav-links { display: none; }
+    .hero { flex-direction: column; align-items: flex-start; justify-content: center; padding: 70px 0; }
+    .hero-card { width: 100%; max-width: 400px; min-height: 430px; }
+    .creative-image-container { height: 190px; }
+    .about { grid-template-columns: 1fr; gap: 35px; margin: 70px auto; }
+    .about-image { height: 300px; }
+    .section-title h2 { font-size: 32px; }
+    .entry-gift-overlay .gift-scene { height: 260px; }
+    .interactive-message { padding: 30px 20px; }
+    .interactive-message h2 { font-size: 28px; }
 }
 
-
 @media (max-width: 500px) {
-
-    .birthday-content {
-        padding: 45px 18px;
-        min-height: 530px;
-    }
-
-    .gift-scene {
-        height: 230px;
-    }
-
-    .birthday-message h2 {
-        font-size: 21px;
-    }
-
-    .music-control {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .floating-music {
-        width: 48px;
-        height: 48px;
-        font-size: 18px;
-        bottom: 18px;
-        right: 18px;
-    }
-
-    .enter-button {
-        padding: 14px 28px;
-        font-size: 14px;
-    }
-
+    .birthday-content { padding: 45px 18px; min-height: 530px; }
+    .gift-scene { height: 230px; }
+    .birthday-message h2 { font-size: 21px; }
+    .music-control { flex-direction: column; gap: 10px; }
+    .floating-music { width: 48px; height: 48px; font-size: 18px; bottom: 18px; right: 18px; }
+    .enter-button { padding: 14px 28px; font-size: 14px; }
+    .interactive-gift-box { transform: scale(1.1); }
+    .interactive-gift-box:hover { transform: scale(1.15) translateY(-5px); }
 }
 
 
 /* =========================================
-   21. ACCESSIBILITY
+   21. ACCESSIBILITY (DIPERBAIKI)
+   Sebelumnya blok ini memaksa SEMUA animasi
+   menjadi 0.01ms saat HP melaporkan
+   "reduced motion", sehingga kado, kembang api,
+   confetti, dan efek scroll tidak terlihat.
+   Sekarang hanya animasi berulang yang dimatikan,
+   jadi animasi utama tetap tampil di semua HP.
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
+    .click-me-text {
+        animation: none;
     }
-
-    .reveal {
-        opacity: 1;
-        transform: none;
-    }
-
 }
