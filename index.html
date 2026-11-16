@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday - Enggi Yolanda</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= ENTRY SCREEN ================= -->
+
+    <div id="entryScreen" class="entry-screen">
+
+        <div class="entry-content" id="entryContent">
+
+            <span class="entry-tag">
+                🎉 A SPECIAL SURPRISE 🎉
+            </span>
+
+            <h1>
+                Happy Birthday<br>
+                <span>Enggi Yolanda</span>
+            </h1>
+
+            <p>
+                Sebuah kejutan kecil menantimu.<br>
+                Tekan tombol di bawah untuk memulai.
+            </p>
+
+            <button id="enterButton" class="enter-button">
+                🎵 Putar Lagu & Masuk
+            </button>
+
+        </div>
+
+
+        <!-- GIFT OPENING SCENE -->
+
+        <div class="entry-gift-overlay" id="entryGiftOverlay" hidden>
+
+            <div class="gift-scene">
+
+                <div class="sparkles" id="entrySparkles"></div>
+
+                <div class="gift-box" id="entryGiftBox">
+
+                    <div class="gift-lid">
+                        <div class="lid-ribbon"></div>
+                        <div class="gift-bow"></div>
+                    </div>
+
+                    <div class="gift-body">
+                        <div class="gift-ribbon"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="entry-birthday-message" id="entryBirthdayMessage">
+
+                <div class="birthday-stars">✨ 🎉 ✨</div>
+
+                <h1>Happy Birthday!</h1>
+
+                <h2>Enggi Yolanda</h2>
+
+                <p>Selamat ulang tahun! 💜</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= AUDIO GLOBAL ================= -->
+
+    <audio
+        id="birthdayMusic"
+        src="/audio/ulangtahun.mp3"
+        preload="auto"
+        loop
+    ></audio>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            ENGGI<span>.</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#home">SELMAT</a>
+            <a href="#about">ULANG</a>
+            <a href="#features">TAHUNN</a>
+        </div>
+
+        <a href="#about" class="nav-button">
+            Get Started
+        </a>
+
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="tag reveal">
+                HAPPY BIRTHDAY
+            </span>
+
+            <h1 class="reveal">
+                Selamat Ulang Tahun<br>
+                <span>Enggi Yolanda.</span>
+            </h1>
+
+            <p class="reveal">
+                Hari ini adalah hari istimewa, karena seseorang
+                seindah dirimu dilahirkan ke dunia. Semoga setiap
+                langkahmu selalu dipenuhi kebahagiaan, senyuman,
+                dan hal-hal baik yang pantas kamu dapatkan.
+            </p>
+
+            <a href="#about" class="hero-button reveal">
+                Explore Now →
+            </a>
+
+        </div>
+
+
+        <!-- CREATIVE DESIGN CARD -->
+
+        <div class="hero-card reveal">
+
+            <div class="creative-image-container">
+
+                <img
+                    id="creativeImage"
+                    class="creative-image"
+                    alt="Creative Design"
+                    hidden
+                >
+
+                <div
+                    id="creativePlaceholder"
+                    class="image-placeholder-card"
+                >
+                    <span>✦</span>
+                    <small>Creative Design</small>
+                </div>
+
+            </div>
+
+            <h3>Enggi Yolanda</h3>
+
+            <p>
+                17 November 2026
+            </p>
+
+            <div class="image-controls">
+
+                <label
+                    for="creativeUpload"
+                    class="upload-button"
+                >
+                    Pilih Gambar
+                </label>
+
+                <input
+                    type="file"
+                    id="creativeUpload"
+                    accept="image/*"
+                    hidden
+                >
+
+                <button
+                    type="button"
+                    id="removeCreative"
+                    class="remove-button"
+                    hidden
+                >
+                    Hapus
+                </button>
+
+            </div>
+
+            <button
+                type="button"
+                id="openGift"
+                class="gift-button"
+            >
+                🎁 Buka Hadiah
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-image reveal">
+
+            <img
+                id="aboutImage"
+                class="about-photo"
+                alt="Foto About"
+                hidden
+            >
+
+            <div
+                id="aboutPlaceholder"
+                class="about-placeholder"
+            >
+                ✦
+            </div>
+
+            <div class="about-image-controls">
+
+                <label
+                    for="aboutUpload"
+                    class="upload-button"
+                >
+                    Pilih Gambar
+                </label>
+
+                <input
+                    type="file"
+                    id="aboutUpload"
+                    accept="image/*"
+                    hidden
+                >
+
+                <button
+                    type="button"
+                    id="removeAbout"
+                    class="remove-button"
+                    hidden
+                >
+                    Hapus
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="tag reveal">
+                ABOUT ENGGI
+            </span>
+
+            <h2 class="reveal">
+                Enggi Yolanda
+            </h2>
+
+            <p class="reveal">
+                Setiap momen memiliki cerita dan setiap
+                kenangan memiliki arti. Hari ini adalah
+                momen spesial untuk merayakan seseorang
+                yang berjuang demi membahagiakan kedua orang tuanya.
+            </p>
+
+            <a href="#features" class="hero-button reveal">
+                Discover More →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES SECTION ================= -->
+
+    <section class="features" id="features">
+
+        <div class="section-title reveal">
+
+            <span class="tag">
+                OUR FEATURES
+            </span>
+
+            <h2>What We Create</h2>
+
+            <p>
+                Simple ideas, extraordinary experiences.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <!-- CARD 1 -->
+
+            <div class="card reveal">
+
+                <div class="card-image-container">
+
+                    <img
+                        id="cardImage1"
+                        class="card-image"
+                        alt="Creative"
+                        hidden
+                    >
+
+                    <div
+                        id="cardPlaceholder1"
+                        class="card-image-placeholder"
+                    >
+                        <span>✦</span>
+                    </div>
+
+                </div>
+
+                <h3>Yourself</h3>
+
+                <p>
+                    Beautiful and strong woman.
+                </p>
+
+                <div class="card-image-controls">
+
+                    <label
+                        for="cardUpload1"
+                        class="upload-button"
+                    >
+                        Pilih Gambar
+                    </label>
+
+                    <input
+                        type="file"
+                        id="cardUpload1"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <button
+                        type="button"
+                        id="removeCard1"
+                        class="remove-button"
+                        hidden
+                    >
+                        Hapus
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="card reveal">
+
+                <div class="card-image-container">
+
+                    <img
+                        id="cardImage2"
+                        class="card-image"
+                        alt="Special Moments"
+                        hidden
+                    >
+
+                    <div
+                        id="cardPlaceholder2"
+                        class="card-image-placeholder"
+                    >
+                        <span>⚡</span>
+                    </div>
+
+                </div>
+
+                <h3>Special Moments</h3>
+
+                <p>
+                    Creating beautiful memories together.
+                </p>
+
+                <div class="card-image-controls">
+
+                    <label
+                        for="cardUpload2"
+                        class="upload-button"
+                    >
+                        Pilih Gambar
+                    </label>
+
+                    <input
+                        type="file"
+                        id="cardUpload2"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <button
+                        type="button"
+                        id="removeCard2"
+                        class="remove-button"
+                        hidden
+                    >
+                        Hapus
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="card reveal">
+
+                <div class="card-image-container">
+
+                    <img
+                        id="cardImage3"
+                        class="card-image"
+                        alt="Happiness"
+                        hidden
+                    >
+
+                    <div
+                        id="cardPlaceholder3"
+                        class="card-image-placeholder"
+                    >
+                        <span>∞</span>
+                    </div>
+
+                </div>
+
+                <h3>Happiness</h3>
+
+                <p>
+                    Unlimited happiness.
+                </p>
+
+                <div class="card-image-controls">
+
+                    <label
+                        for="cardUpload3"
+                        class="upload-button"
+                    >
+                        Pilih Gambar
+                    </label>
+
+                    <input
+                        type="file"
+                        id="cardUpload3"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <button
+                        type="button"
+                        id="removeCard3"
+                        class="remove-button"
+                        hidden
+                    >
+                        Hapus
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact reveal" id="contact">
+
+        <span class="tag">
+            A SPECIAL DAY
+        </span>
+
+        <h2>
+            Make every moment<br>
+            <span>beautiful.</span>
+        </h2>
+
+        <a href="#home" class="hero-button">
+            Back to Top ↑
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+        Made with Love ❤️ for Enggi Yolanda
+    </footer>
+
+
+    <!-- ================= FLOATING MUSIC BUTTON ================= -->
+
+    <button
+        id="floatingMusic"
+        class="floating-music"
+        title="Musik"
+        aria-label="Kontrol musik"
+    >
+        🔇
+    </button>
+
+
+    <!-- =====================================
+         BIRTHDAY SURPRISE MODAL
+    ====================================== -->
+
+    <div
+        id="birthdayModal"
+        class="birthday-modal"
+        aria-hidden="true"
+    >
+
+        <div class="birthday-content">
+
+            <button
+                type="button"
+                id="closeGift"
+                class="close-gift"
+                aria-label="Tutup hadiah"
+            >
+                ×
+            </button>
+
+
+            <div class="surprise-label">
+                ✨ A SPECIAL SURPRISE ✨
+            </div>
+
+
+            <div class="gift-scene">
+
+                <div
+                    class="sparkles"
+                    id="sparkles"
+                ></div>
+
+                <div
+                    class="gift-box"
+                    id="giftBox"
+                >
+
+                    <div class="gift-lid">
+
+                        <div class="lid-ribbon"></div>
+
+                        <div class="gift-bow"></div>
+
+                    </div>
+
+                    <div class="gift-body">
+
+                        <div class="gift-ribbon"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="music-control">
+
+                <span id="musicStatus">
+                    🎵 Musik ulang tahun
+                </span>
+
+                <button
+                    type="button"
+                    id="musicToggle"
+                    class="music-toggle"
+                >
+                    ▶ Putar Musik
+                </button>
+
+            </div>
+
+
+            <div
+                class="birthday-message"
+                id="birthdayMessage"
+            >
+
+                <div class="birthday-stars">
+                    ✨ 🎉 ✨
+                </div>
+
+                <h1>Happy Birthday!</h1>
+
+                <h2>Enggi Yolanda</h2>
+
+                <p>
+                    Selamat ulang tahun ENGGI YOLANDA.
+                </p>
+
+                <p>
+                    Semoga setiap harimu dipenuhi kebahagiaan,
+                    cinta, senyuman, dan semua impianmu
+                    menjadi kenyataan.
+                </p>
+
+                <h3>
+                    Have a Wonderful Birthday! 💜
+                </h3>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="replayGift"
+                class="replay-button"
+                hidden
+            >
+                ↻ Putar Lagi
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
