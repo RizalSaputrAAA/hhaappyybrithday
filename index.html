@@ -2,7 +2,8 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tambahan user-scalable=no agar layar tidak goyang di Oppo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>Happy Birthday - Enggi Yolanda</title>
 
@@ -79,13 +80,14 @@
 
 
     <!-- ================= AUDIO GLOBAL ================= -->
-    <!-- PERBAIKAN: path relatif (tanpa "/" di depan) -->
+    <!-- FIX MOBILE: Tambahkan playsinline agar audio tidak membuka layar penuh -->
 
     <audio
         id="birthdayMusic"
         src="audio/ulangtahun.mp3"
         preload="auto"
         loop
+        playsinline
     ></audio>
 
 
@@ -151,10 +153,10 @@
                 >
             </div>
 
-            <h3>Creative Design</h3>
+            <h3>Enggi Yolanda</h3>
 
             <p>
-                Beautiful things start with imagination.
+                17 November 2026
             </p>
 
             <button
@@ -285,7 +287,7 @@
     <!-- ================= FOOTER ================= -->
 
     <footer>
-        Made with Love ❤️ for Enggi Yolanda
+        Happy BrithDay for Enggi Yolanda
     </footer>
 
 

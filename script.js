@@ -32,6 +32,9 @@ let confettiElements = [];
 let revealInitialized = false;
 let isInteractiveGiftOpened = false;
 
+// FIX OPPO/HP: Deteksi layar HP untuk mengurangi beban render partikel
+const isMobile = window.innerWidth <= 768;
+
 
 /* =========================================
    2. ENTRY SCREEN + GIFT ANIMATION
@@ -45,10 +48,11 @@ window.scrollTo(0, 0);
 document.body.style.overflow = "hidden";
 
 enterButton.addEventListener("click", async () => {
+    // FIX OPPO: Bungkus try-catch agar jika autoplay diblokir, animasi tetap jalan
     try {
         await birthdayMusic.play();
     } catch (error) {
-        console.log("Musik belum dapat diputar:", error);
+        console.log("Autoplay musik diblokir, animasi tetap berjalan.");
     }
 
     entryContent.style.opacity = "0";
@@ -95,20 +99,15 @@ enterButton.addEventListener("click", async () => {
 ========================================= */
 
 interactiveGiftBox.addEventListener("click", () => {
-    if (isInteractiveGiftOpened) return; // Cegah klik berulang
+    if (isInteractiveGiftOpened) return; 
     isInteractiveGiftOpened = true;
 
-    // Sembunyikan teks "Klik Aku"
     clickMeText.style.opacity = "0";
-
-    // Buka kado
     interactiveGiftBox.classList.add("open");
 
-    // Tembak kembang api & confetti
     createFireworks();
     createConfetti();
 
-    // Tampilkan pesan setelah tutup kado terbuka
     setTimeout(() => {
         interactiveMessage.classList.add("show");
     }, 800);
@@ -131,11 +130,7 @@ function updateFloatingMusic() {
 
 floatingMusic.addEventListener("click", async () => {
     if (birthdayMusic.paused) {
-        try {
-            await birthdayMusic.play();
-        } catch (error) {
-            console.log(error);
-        }
+        try { await birthdayMusic.play(); } catch (error) { console.log(error); }
     } else {
         birthdayMusic.pause();
     }
@@ -165,7 +160,8 @@ function initScrollReveal() {
                 }
             });
         },
-        { threshold: 0.12, rootMargin: "0px 0px -50px 0px" }
+        // FIX OPPO: Threshold lebih kecil agar animasi mudah terpicu
+        { threshold: isMobile ? 0.05 : 0.12, rootMargin: "0px 0px -30px 0px" }
     );
 
     reveals.forEach((element, index) => {
@@ -188,8 +184,11 @@ function createSparkles(targetElement) {
     const container = targetElement || sparkles;
     container.innerHTML = "";
     const symbols = ["✨", "⭐", "💜", "🌟", "💖"];
+    
+    // FIX OPPO: Kurangi jumlah sparkles di HP (28 -> 15)
+    const count = isMobile ? 15 : 28;
 
-    for (let i = 0; i < 28; i++) {
+    for (let i = 0; i < count; i++) {
         const sparkle = document.createElement("span");
         sparkle.className = "spark";
         sparkle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
@@ -209,8 +208,11 @@ function createSparkles(targetElement) {
 
 function createConfetti() {
     const colors = ["#a855f7", "#ec4899", "#facc15", "#22d3ee", "#ffffff", "#c084fc"];
+    
+    // FIX OPPO: Kurangi jumlah confetti di HP (100 -> 40)
+    const count = isMobile ? 40 : 100;
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < count; i++) {
         const confetti = document.createElement("div");
         confetti.className = "confetti";
         confetti.style.left = Math.random() * 100 + "vw";
@@ -233,7 +235,10 @@ function createConfetti() {
 
 function createFireworks() {
     const colors = ["#a855f7", "#ec4899", "#facc15", "#22d3ee", "#f9a8d4", "#c084fc", "#ffffff"];
-    const bursts = 5;
+    
+    // FIX OPPO: Kurangi ledakan & partikel di HP (Burst 5->3, Partikel 24->12)
+    const bursts = isMobile ? 3 : 5; 
+    const particleCount = isMobile ? 12 : 24; 
 
     for (let b = 0; b < bursts; b++) {
         const delay = b * 380;
@@ -242,7 +247,6 @@ function createFireworks() {
             const startX = 15 + Math.random() * 70;
             const startY = 15 + Math.random() * 45;
             const color = colors[Math.floor(Math.random() * colors.length)];
-            const particleCount = 24;
 
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement("div");
